@@ -1,0 +1,32 @@
+.common {
+  display: inline;
+}
+
+body {
+  border-color: lightgreen;
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: currentColor;
+  padding: 150px;
+}
+
+.header {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: currentColor;
+  padding: 150px;
+}
+.header a {
+  font-size: 16px;
+}
+.header a:hover {
+  background-color: #ccc;
+}
+.header a.active {
+  background-color: red;
+}
+.root-level {
+  color: #fff;
+}
+
+/*# sourceMappingURL=index.css.map */

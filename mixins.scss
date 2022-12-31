@@ -1,0 +1,36 @@
+//basic function
+@function custom-color($color) {
+    @return fade-out($color,0.5%); 
+ }
+ 
+ //default argument
+ @function custom-color-default-value($color:#000) {
+     @if $color == #000 {
+         @return currentColor ;
+     }
+     @return fade-out($color,0.5%); 
+ }
+ 
+ //infinite argument
+ @function sum($numbers...) {
+     $sum:0;
+     @each $num in $numbers {
+         $sum: $sum + $num;
+     }
+     @return $sum;
+ }
+ 
+ @mixin common($color: #000) {
+     display: block;
+     color:custom-color($color);
+     background-color: custom-color-default-value();
+     padding: sum(100px,50px);
+ }
+ 
+ @mixin common-classes($isInline: true) {
+     @if $isInline == true {
+         .common {
+             display: inline;
+         }
+     }
+ }
